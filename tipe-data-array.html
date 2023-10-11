@@ -11,6 +11,34 @@
       let arrayKosong = [];
 
       let arrayNama = ["Hassan", "Jadi"];
+
+      //  menambah array
+      const names = [];
+      names.push("Hassan");
+      names.push("Jadi", "Oke");
+
+      console.table(names);
+
+      // menampilkan data per index
+      console.info(names[0]);
+      console.info(names[1]);
+      console.info(names[2]);
+
+      //   merubah data index
+      names[0] = "Programmer";
+      names[1] = "Generasi";
+      names[2] = "Z";
+
+      console.table(names);
+      2;
+
+      //   delete data index
+      delete names[2];
+      console.table(names);
+
+      //   mengubah data yang sudah didelete
+      names[2] = "Diubah cuy";
+      console.table(names);
     </script>
   </body>
 </html>
