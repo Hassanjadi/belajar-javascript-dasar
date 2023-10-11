@@ -1,48 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Konversi String dan Number</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-
-        // Masalah Konversi String dan Number
-        /*const value1 = "1";
+      // Masalah Konversi String dan Number
+      /*const value1 = "1";
         const value2 = 1;
         const sum = value1 +  value2;
 
         document.writeln(`<p>${sum}</p>`);*/
 
-        // Konversi string ke number
-        const value1 = parseInt("1");
-        const value2 = 1;
-        const sum = value1 +  value2;
+      // Konversi string ke number
+      const value1 = parseInt("1");
+      const value2 = 1;
+      const sum = value1 + value2;
 
-        document.writeln(`<p>${sum}</p>`);
+      document.writeln(`<p>${sum}</p>`);
 
-        // parseInt, parseFloat, Number
-        document.writeln(`<p>${parseInt("1.1")}</p>`);
-        document.writeln(`<p>${parseFloat("1.1")}</p>`);
-        document.writeln(`<p>${Number("1.1")}</p>`);
+      // parseInt, parseFloat, Number
+      document.writeln(`<p>${parseInt("1.1")}</p>`);
+      document.writeln(`<p>${parseFloat("1.1")}</p>`);
+      document.writeln(`<p>${Number("1.1")}</p>`);
 
-        // toString
-        const a = 1;
-        const b = 1;
-        // const total = a + b; //2
-        const total = a.toString() + b.toString(); //2
-        document.writeln(`<p>${total}</p>`);
+      // toString
+      const a = 1;
+      const b = 1;
+      // const total = a + b; //2
+      const total = a.toString() + b.toString(); //2
+      document.writeln(`<p>${total}</p>`);
 
-        // NaN yang bisa ditolerin asalkan yang salah berada dibagian belakang
-        document.writeln(`<p>${parseInt("1salah")}</p>`);
-        document.writeln(`<p>${parseInt("1.1benar")}</p>`);
+      // NaN yang bisa ditolerin asalkan yang salah berada dibagian belakang
+      document.writeln(`<p>${parseInt("1salah")}</p>`);
+      document.writeln(`<p>${parseInt("1.1benar")}</p>`);
 
-        // NaN yang tidak bisa ditolerin
-        document.writeln(`<p>${Number("1salah")}</p>`);
-        document.writeln(`<p>${Number("1.1benar")}</p>`);
-        document.writeln(`<p>${Number("salah")}</p>`);
+      // NaN yang tidak bisa ditolerin
+      document.writeln(`<p>${Number("1salah")}</p>`);
+      document.writeln(`<p>${Number("1.1benar")}</p>`);
+      document.writeln(`<p>${Number("salah")}</p>`);
 
+      const first = Number("salah");
+      const totalNumber = first + 100;
+      document.writeln(`<p>${totalNumber}</p>`);
+
+      // Pengecekan NaN atau bukan
+      document.writeln(`<p>${isNaN(first)}</p>`);
+      document.writeln(`<p>${isNaN(100)}</p>`);
+      document.writeln(`<p>${isNaN(NaN)}</p>`);
     </script>
-</body>
+  </body>
 </html>
