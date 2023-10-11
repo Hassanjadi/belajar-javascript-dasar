@@ -32,12 +32,15 @@
       console.table(names);
       2;
 
-      //   delete data index
+      //   delete da ta index
       delete names[2];
       console.table(names);
 
       //   mengubah data yang sudah didelete
       names[2] = "Diubah cuy";
+      names.push(1, 2, 3, 4, 5);
+      //   multiple dimension
+      names.push(["Hassan", "Jadi"]);
       console.table(names);
     </script>
   </body>
