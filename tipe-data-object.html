@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tipe Data Object</title>
+  </head>
+  <body>
+    <script>
+      // membuat tipe data object
+      const orang = {
+        // "nama lengkap": "Hassan" || digunakan saat property dua kata menggunakan spasi
+        nama: "Hassan",
+        alamat: "Indonesia",
+        umur: 22,
+      };
+
+      //   mengakses property object
+      console.info(`Nama : ${orang.nama}`);
+      console.info(`Alamat : ${orang.alamat}`);
+      console.info(`Umur : ${orang.umur}`);
+
+      // ubah property / attibute
+      //   orang["nama"] = "Hasaan";
+      //   orang["alamat"] = "Indonesia";
+      //   orang["umur"] = "22";
+
+      console.table(orang);
+
+      delete orang["umur"];
+
+      console.table(orang);
+    </script>
+  </body>
+</html>
