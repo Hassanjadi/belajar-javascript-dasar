@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operator Logika di Non Boolean</title>
+  </head>
+  <body>
+    <script>
+      // operator OR (||)
+      conosole.info("Hello" || ""); //Hello
+      conosole.info("" || []); //[]
+      conosole.info("0" || "NOL"); //"0"
+      conosole.info(0 || "NOL"); //NOL
+      conosole.info(null || "NULL"); //NULL
+      conosole.info(undefined || "UNDEFINED"); //NULL
+      conosole.info(0 || false); //false
+
+      //   contoh pakai
+      const person = {
+        firstName: "Hassan",
+        lastName: "Jadi",
+      };
+
+      const name = person.firstName || person.lastName;
+      console.info(name);
+
+      //   operator AND (&&)
+      conosole.info("Hello" && ""); // ""
+      conosole.info("" && []); // ""
+      conosole.info("0" && "NOL"); // "NOL"
+      conosole.info(0 && "NOL"); // 0
+      conosole.info(null && "NULL"); // undefined
+      conosole.info(undefined && "UNDEFINED"); // null
+      conosole.info("undefined" && "null"); // null
+    </script>
+  </body>
+</html>
