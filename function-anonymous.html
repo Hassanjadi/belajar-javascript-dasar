@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anonymous Function</title>
+  </head>
+  <body>
+    <script>
+      // function anonymousc di dalam value
+      let say = function (name) {
+        document.writeln(`<p>Hello ${name}</p>`);
+      };
+
+      say("Budi");
+      say("Joni");
+
+      //   anonymous function di parameter
+      function giveMeName(callback) {
+        callback("Budidu");
+      }
+
+      giveMeName(say);
+
+      giveMeName(function (name) {
+        document.writeln(`Hi ${name}`);
+      });
+    </script>
+  </body>
+</html>
