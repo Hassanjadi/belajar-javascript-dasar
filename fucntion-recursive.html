@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Rescursive</title>
+  </head>
+  <body>
+    <script>
+      // factorial menggunakan loop
+      function factorial(value) {
+        let result = 1;
+        for (i = 1; i <= value; i++) {
+          result *= i;
+        }
+
+        return result;
+      }
+
+      console.log(factorial(5));
+
+      //   factorial menggunakan rescursive
+      function factorialRescursive(value) {
+        if (value === 1) {
+          return 1;
+        } else {
+          return (value = factorialRescursive(value - 1));
+        }
+      }
+
+      console.info(factorialRescursive(16));
+
+      factorialRescursive(5);
+      // 5 * factorialRescursive(4)
+      // 5 * 4 * factorialRescursive(3)
+      // 5 * 4 * 3 * factorialRescursive(2)
+      // 5 * 4 * # * 2 * factorialRescursive(1)
+      //  5 * 4 * 3 * 2 * 1
+    </script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Generator</title>
+  </head>
+  <body>
+    <script>
+      function* createNames() {
+        yield "Hassan";
+        yield "Jadi";
+        yield "Oke";
+      }
+
+      //console.info(createNames()); // output generator
+
+      //   const names = createNames(); // outpur UNDEFINED
+      //   console.info(names[0]);
+
+      const names = createNames();
+      for (const name of names) {
+        console.info(name); //output Hassan Jadi Oke
+      }
+
+      //   function generator kompleks
+      function* buatGanjil(value) {
+        for (let i = 1; i <= value; i++) {
+          if (i % 2 === 1) {
+            console.info(`Vield ${i}`);
+            yield i;
+          }
+        }
+      }
+
+      //   eager generator
+      function buatGanjilArray(value) {
+        const result = [];
+        for (let i = 1; i <= value; i++) {
+          if (i % 2 === 1) {
+            console.info(`Vield ${i}`);
+            result.push(1);
+          }
+        }
+        return result;
+      }
+
+      //   lazy generator
+      const numbers = buatGanjil(100);
+      //   for (const number of numbers) {
+      //     console.info(number);
+      //   }
+      console.info(numbers.next().value);
+      console.info(numbers.next().value);
+      console.info(numbers.next().value);
+    </script>
+  </body>
+</html>
