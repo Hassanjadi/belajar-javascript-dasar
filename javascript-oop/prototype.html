@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perototype</title>
+</head>
+<body>
+    <script>
+        // Constructor Function
+
+        function Person(firstName, lastName) { // parameter di constructor
+            // Menambahkan property
+            this.firstName = firstName;
+            this.lastName = lastName;
+            // Method di constructor
+            this.sayHello = function (name) {
+                console.info(`Hello ${name}, my name is ${this.firstName}`)
+            }
+        }
+
+        // Menambahkan property ke prototype
+        Person.prototype.sayBye = function () {
+            console.info('Good Bye');
+        }
+
+        Person.prototype.run = function() {
+            console.info(`${this.firstName}, is running`);
+        }
+
+        const eko = new Person('Eko', 'Dok');
+        const budi = new Person('Budi', 'Doremi');
+
+        console.log(eko);
+        console.log(budi);
+
+    </script>
+</body>
+</html>
