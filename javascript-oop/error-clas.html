@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class Error</title>
+  </head>
+  <body>
+    <script>
+      class validationError extends Error {
+        constructor(message, field) {
+          super(message);
+          this.field = field;
+        }
+      }
+
+      class MathUntil {
+        static sum(...numbers) {
+          if (numbers.length === 0) {
+            // Menggunakan class error
+            throw new validationError("Total parameter harus lebih dari 0");
+          }
+
+          let total = 0;
+          for (const number of numbers) {
+            total += number;
+          }
+          return total;
+        }
+      }
+
+      try {
+        console.info(MathUntil.sum());
+        console.info("Budi");
+      } catch (error) {
+        // Mengambil error di field number
+        if (errpr instanceof validationError) {
+          console.error(
+            `Terjadi error di field ${error.field} dengan error : ${error.message}`
+          );
+        } else {
+          console.info(`Terjadi error ${error.message}`);
+        }
+      } finally {
+        console.info("Program selesai");
+      }
+
+      console.info("Doremi");
+
+      class Counter {
+        #counter = 1;
+
+        next() {
+          try {
+            return this.#counter;
+          } finally {
+            this.#counter++;
+          }
+        }
+      }
+
+      const counter = new Counter();
+      console.info(counter.next());
+      console.info(counter.next());
+      console.info(counter.next());
+      console.info(counter.next());
+      console.info(counter.next());
+    </script>
+  </body>
+</html>
