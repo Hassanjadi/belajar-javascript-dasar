@@ -14,7 +14,23 @@
       console.info(typeof number); // Number
       console.info(number); // 12345
 
-      console.info(number("salah")); // NaN
+      console.info(Number("salah")); // NaN
+
+      console.info(Number.MIN_VALUE); // 5e-324
+      console.info(Number.MAX_VALUE); // 1.7976931348623157e+308
+      console.info(Number.MIN_SAFE_INTEGER); // -9007199254740991
+      console.info(Number.MAX_SAFE_INTEGER); // 9007199254740991
+      console.info(Number.NaN); // NaN
+
+      const data = Number("12345"); // NaN
+      console.info(Number.isInteger(data)); // false
+      console.info(Number.isNaN(data)); // true
+
+      const value = Number("12345");
+      console.info(value.toString(2));
+      console.info(value.toLocaleString("id-ID"));
+      console.info(value.toLocaleString("en-US"));
+
     </script>
   </body>
 </html>
