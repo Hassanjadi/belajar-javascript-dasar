@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Node Property</title>
+  </head>
+  <body>
+    <ul id="menu">
+      <li id="first">First</li>
+      <li id="second">Second</li>
+      <li id="third">Third</li>
+    </ul>
+    <script>
+      const menu = document.getElementById("menu");
+      console.info(menu);
+      // mengambil list menu
+      console.info(menu.childNodes);
+
+      const second = document.getElementById("second");
+      console.info(second);
+      console.info(second.textContent);
+      // mengmabil child sebelumnya
+      // tambahkan .prev 1x untuk mendapatkan tepat child diatasnya
+      console.info(second.previousSibling.previousSibling);
+      // mengmabil child setelahnya
+      console.info(second.nextSibling);
+    </script>
+  </body>
+</html>
