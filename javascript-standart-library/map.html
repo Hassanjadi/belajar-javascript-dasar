@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map</title>
+  </head>
+  <body>
+    <script>
+      const map = new Map();
+      map.set("Name", "John Doe");
+      map.set("Address", "Indonesia");
+
+      console.info(map);
+
+      // mendapatkan detail
+      console.info(map.get("Name"));
+      console.info(map.get("Hobby"));
+      console.info(map.get("Name"));
+
+      // print out
+      map.forEach((value, key) => console.log(`${key} : ${value}`));
+    </script>
+  </body>
+</html>
