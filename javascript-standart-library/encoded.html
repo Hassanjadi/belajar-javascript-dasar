@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encode</title>
+  </head>
+  <body>
+    <!-- ENCODE -->
+    <!-- Saat kita menulis URL, kadang kita ingin menambahkan informasi tambahan seperti query parameter misalnya -->
+    <!-- URL sendiri sudah memiliki standart encoding penulisan URL -->
+    <!-- Standart encoding ini dilakukan agar penulisan URL aman ketika diterima oleh server  -->
+    <!-- Aman disini dalam artian informasi URL tidak berubah -->
+    <!-- Contoh paling sederhana, misal, walaupun kita bisa mengirim spasi dalam url, tapi disarankan untuk di encode agar nilai spasi tidak benar-benar terlihat seperti spasi pada URLnya -->
+
+    <script>
+      {
+        // encode url dan decode url
+
+        const url = "http://contoh.com/?name=Eko Kurniawan Khannedy";
+        console.info(url);
+
+        const encoded = encodeURI(url);
+        console.info(encoded);
+
+        const decoded = decodeURI(encoded);
+        console.info(decoded);
+      }
+
+      {
+        // encode dan decode component url
+
+        const value = "Eko Kurniawan Khannedy";
+        const url = "http://contoh.com/?name=";
+        console.info(url + value);
+
+        const encoded = encodeURIComponent(value);
+        console.info(url + encoded);
+
+        const decoded = decodeURIComponent(encoded);
+        console.info(url + decoded);
+      }
+    </script>
+  </body>
+</html>
