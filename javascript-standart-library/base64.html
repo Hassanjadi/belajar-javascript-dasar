@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" condevice-widthtent="width=, initial-scale=1.0" />
+    <title>Base64</title>
+  </head>
+  <body>
+    <!-- BASE64 -->
+    <!-- Base64 merupakan binary to text encoding, representasi binary data dalam format string -->
+    <!-- Base64 merupakan format text data yang aman untuk dikirimkandi web -->
+    <!-- Base64 merupakan encoding yang biasanya digunakan ketika perlu mengirim data dari client ke server -->
+    <!-- Karena encoding Base64 merupakan text, oleh karena itu sangat aman digunakan pada query param URL atau text body dalam form -->
+
+    <script>
+      const original = "Eko&Kurniawan=Khannedy";
+      console.info(original);
+
+      const encoded = btoa(original);
+      console.log(encoded);
+
+      const decoded = atob(encoded);
+      console.info(decoded);
+    </script>
+  </body>
+</html>
