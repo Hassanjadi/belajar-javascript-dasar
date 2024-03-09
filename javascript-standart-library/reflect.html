@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reflect</title>
+  </head>
+  <body>
+    <!-- REFLECT -->
+    <!-- Reflect merupakan class yang digunakan untuk mengeksekusi javascript function -->
+    <!-- Reflect tidak memiliki constructor, dan cara penggunaan Reflect tidak dengan membuat object dengan new Reflect -->
+    <!-- Penggunaakn Reflect adalah menggunakan banyak sekali static methodnya -->
+
+    <script>
+      const person = {};
+
+      Reflect.set(person, "firstName", "Eko");
+      Reflect.set(person, "lastName", "Khannedy");
+
+      console.info(person);
+
+      // mendapatkan isi person
+      console.info(Reflect.get(person, "firstName"));
+      console.info(Reflect.get(person, "lastName"));
+
+      // cek isi person
+      console.info(Reflect.has(person, "firstName"));
+      console.info(Reflect.has(person, "middleName"));
+      console.info(Reflect.has(person, "lastName"));
+    </script>
+  </body>
+</html>
