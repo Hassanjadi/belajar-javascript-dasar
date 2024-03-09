@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eval</title>
+  </head>
+  <body>
+    <!-- EVAL -->
+    <!-- Eval merupakan function yang digunakan untuk mengeksekusi kode Javascript dari string -->
+    <!-- Fitur ini sangat menarik, namun perlu hati=hati ketika menggunakannya -->
+    <!-- Jika sampai salah penggunaan, maka bisa jadi kita malah mengeksekusi kode program yang bisa menyebabkan masalah keamanan di website kita -->
+
+    <script>
+      const script = "alert('Anda di hack')";
+
+      eval(script);
+    </script>
+  </body>
+</html>
