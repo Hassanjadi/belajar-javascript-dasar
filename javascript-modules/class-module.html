@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class</title>
+  </head>
+  <body>
+    <!-- CLASS DI MODULEE -->
+    <!-- Selain function dan juga varible, di module juga kita bisa menambahkan class -->
+    <!-- Secara default, class tersebut hanya bisa diakses dari dalam modulenya saja, tidak bisa diluar module -->
+    <!-- Jika kita ingin mengekspos class yang kita buat, kita juga bisa menggunakan kata kunci export di awal deklarasi classnya -->
+
+    <script type="module">
+      import { Person } from "./scripts/class.js";
+
+      const person = new Person("Eko");
+      person.sayHello("Joko");
+    </script>
+  </body>
+</html>
