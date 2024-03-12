@@ -1,3 +1,3 @@
 export { Person } from "./class";
-export { sayHello, sayGoodBye } from "./say";
+export { sayGoodBye, sayHello } from "./say";
 export { sum } from "./multiple";
