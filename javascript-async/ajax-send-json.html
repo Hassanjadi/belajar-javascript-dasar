@@ -13,16 +13,17 @@
       </label>
       <br />
       <label for="password"
-        >Password : <input type="password" id="password" name="Password" />
+        >Password : <input type="password" id="password" name="password" />
       </label>
       <br />
-      <input type="button" id="login" value="login" />
+      <input type="button" id="login" value="Login" />
     </form>
+    <h1 id="response"></h1>
 
     <script>
       function doLogin() {
         const ajax = new XMLHttpRequest();
-        ajax.open("POST", "");
+        ajax.open("POST", "https://example.free.beeceptor.com");
         ajax.onload = function () {
           const response = document.getElementById("response");
           response.innerText = ajax.responseText;
